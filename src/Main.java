@@ -260,6 +260,29 @@ public class Main {
         vector.clear();
         System.out.println("VECTOR SIZE :"+vector.size());
 
+        //TODO : STACK - IT IS THREAD SAFE
+
+        Stack<Integer> stack = new Stack<Integer>();
+        System.out.println("SIZE : "+stack.size());
+
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);
+
+        for(Integer item : stack){
+            System.out.println(item);
+        }
+
+        System.out.println("SIZE : "+stack.size());
+
+        System.out.println("POPPED : "+stack.pop());
+
+        System.out.println("Element Ready to Be Popped : "+stack.peek());
+
+        System.out.println("SIZE : "+stack.size());
+
+        System.out.println(stack);
 
 
     }
