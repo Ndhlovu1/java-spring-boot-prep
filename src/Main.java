@@ -200,6 +200,29 @@ public class Main {
 
         }
 
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : LINKED LIST \n\n");
+
+        LinkedList<String> linkedList1 = new LinkedList<String>();
+
+        linkedList1.add("Python");
+        linkedList1.add("Javascript");
+        linkedList1.add("Kotlin");
+        linkedList1.add("C#");
+
+        for(String item : linkedList1){
+            System.out.println(item);
+        }
+
+        //Add an item to a position
+        linkedList1.add(2,"PHP");
+
+        for(String item : linkedList1){
+            System.out.println(item);
+        }
+
+        System.out.println(linkedList1.size());
+
+
 
 
 
