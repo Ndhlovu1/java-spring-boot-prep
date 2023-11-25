@@ -378,6 +378,30 @@ public class Main {
          *
          */
 
+        Map<Integer, String> map = new HashMap<Integer, String>();
+        map.put(24, "Tino");
+        map.put(25, "Ndhlovu");
+        map.put(26, "Mr T Ndlovu");
+        map.put(27, "Dark Phoenix");
+        map.put(28, "Phoenix Global");
+
+        for(Map.Entry<Integer, String> map_ : map.entrySet()){
+            //System.out.println(map_);
+            System.out.println(map_.getKey() +" : "+map_.getValue());
+        }
+
+        String value = map.get(24);
+        System.out.println(value);
+        System.out.println("ALL KEYS IN OUR MAP : "+map.keySet());
+        System.out.println("ALL VALUES IN OUR MAP : "+map.values());
+        System.out.println("REMOVING : "+map.remove(24));
+        System.out.println("CURRENT MAP : "+ map);
+        map.clear();
+        System.out.println("CLEARING EVERYTHING : "+map.size());
+
+
+
+
 
 
 
