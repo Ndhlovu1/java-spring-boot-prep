@@ -1,4 +1,4 @@
-import java.util.Locale;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -101,7 +101,7 @@ public class Main {
 
         for (int i = 0; i < 10000; i++) {
             buffer.append("Home");
-            System.out.println(buffer);
+            //System.out.println(buffer);
         }
         System.out.println("TIME TAKEN : "+(System.currentTimeMillis() - start_time));
 
@@ -146,16 +146,61 @@ public class Main {
 
         /** TODO : LIST INTERFACE - Is an ordered collection of elements that allows duplicate elements
          *
-         * TODO : AVAILABLE IN THE
-         *
+         * TODO : AVAILABLE IN THE java.util package and inherits the collection interface. BELOW ARE THE CLASSES THAT IMPLEMENT THE LIST INTERFACE
+         *  ARRAYLIST,
+         *  LINKEDLIST,
+         *  VECTOR
          *
          */
 
+        List<Integer> linkedList = new LinkedList<Integer>();
 
 
-    }
 
-    public static void arrays(){
+        List<Integer> vectors = new Vector<Integer>();
+
+        // TODO : ARRAYLIST(DYNAMIC ARRAYS) - SIMILAR TO AN ARRAY BUT CAN DYNAMICALLY INCREASE OR DECREASE IT'S SIZE AS ELEMENTS ARE ADDED OR REMOVED
+
+        /**                             TODO : ARAYLIST METHODS
+         *
+         *  boolean add(Collection c) - Appends to the specified element to the end of a list
+         *
+         *  void add(int index, Object element) - Inserts the specified element at the specified position
+         *
+         *  Void clear() - Removes all the elements from the list
+         *
+         *  int lastIndexOf(Object o) - Return the index in this list of the last occurence of the specified element, or -1 if the list does not contain this element
+         *
+         *  Object clone() - Return a shallow copy of an arrayList
+         *
+         *  Object[] to Array() - Return a shallow copy of an ArrayList
+         *
+         *  void trimToSize() - Trims the capacity of this ArrayList instance to be list's current size
+         *
+         *  size() - Tell us how many are inside
+         *
+         *  remove(index) - TO remove an item
+         *
+         */
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : ARRAY LIST \n\n");
+
+        List<String> arrayList = new ArrayList<>();
+
+        arrayList.add("Sultan");
+        arrayList.add("Tinomudaishe");
+        arrayList.add("24");
+
+
+
+        //TODO : ITERATE THROUGH THE LIST
+        System.out.println("LIST SIZE :"+arrayList.size());
+        for(String value : arrayList){
+            System.out.println("REMOVED : "+value);
+
+        }
+
+
 
 
     }
