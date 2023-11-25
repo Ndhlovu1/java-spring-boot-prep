@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -74,7 +76,31 @@ public class Main {
 
         }
 
+        String name = "Tinomudaishe Ndhlovu ";
+
+        System.out.println(name.replace(" ","-"));
+
+        System.out.println(name.indexOf("a"));
+
+        System.out.println(name.trim());
+
+        System.out.println(name.length());
+
+        System.out.println(name.charAt(2));
+
+        System.out.println(name.subSequence(0,3));
+
+        System.out.println(name.toLowerCase());
+
+        System.out.println(name.toUpperCase());
+
 
 
     }
+
+    public static void arrays(){
+
+
+    }
+
 }
