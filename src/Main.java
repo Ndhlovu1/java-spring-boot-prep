@@ -1,6 +1,33 @@
 import java.util.*;
 
+
+
+//TODO : USING STACKS TO REVERSE A STRING
+class StringReverser{
+
+    public String reverseString(String input){
+
+        //TODO : DECLARE A STACK
+        Stack<Character> stack = new Stack<Character>();
+        for(Character character : stack)
+            //Save the item to the stack with LIFO
+            stack.push(character);
+
+            String reversed = "";
+
+            while (!stack.empty()){
+                reversed += stack.pop();
+            }
+
+        return reversed;
+
+    }
+
+}
+
+
 public class Main {
+
     public static void main(String[] args) {
 
         /**
