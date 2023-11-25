@@ -94,6 +94,63 @@ public class Main {
 
         System.out.println(name.toUpperCase());
 
+        long start_time = System.currentTimeMillis();
+
+        StringBuffer buffer = new StringBuffer("Welcome");
+        System.out.println(buffer.capacity());
+
+        for (int i = 0; i < 10000; i++) {
+            buffer.append("Home");
+            System.out.println(buffer);
+        }
+        System.out.println("TIME TAKEN : "+(System.currentTimeMillis() - start_time));
+
+
+        long start_time2 = System.currentTimeMillis();
+
+        StringBuffer builder = new StringBuffer("Hello");
+        System.out.println(buffer.capacity());
+
+        for (int i = 0; i < 10000; i++) {
+            builder.append("World");
+            //System.out.println(builder);
+        }
+        System.out.println("\nTIME TAKEN BUILDER : "+(System.currentTimeMillis() - start_time2));
+
+        /**     COLLECTION FRAMEWORK
+         *
+         * INTERFACES - GROUP OF RELATED METHODS WITH EMPTY BODIES(ABSTRACT-HIDING IMPLEMENTATION DETAILS)
+         *
+         * CLASSES - IMPLEMENTATION OF THE COLLECTION INTERFACES
+         *
+         * ALGORITHMS - USEFUL FOR CALCULATION, COMPUTATION AND SORTING & SEARCCHING (ITERATIONS TO FIND BEST OPTION AS PER TIME AND SPACE COMPLEXITY)
+         *
+         */
+
+        /**         TODO : COLLECTION INTERFACE IS THE ROOT INTERFACE OF THE JAVA COLLECTIONS FRAMEWORK
+         * TODO : IT IS IMPLEMENTED THROUGH ITS' SUB INTERFACES
+         *
+         * 1. LIST (Interface) - ALL Implement the LIST Interface
+         *      ARRAYLIST, LINKEDLIST, VECTOR, STACK(These are all classes)
+         *
+         * 2. QUEUE (Interface)
+         *      PriorityQue - Implements the QUEUE Interface
+         *      Dequeue(Interface)
+         *      ArrayDeque
+         *
+         * 3. SET (Interface)
+         *      HashSet(CLASS) Implements the Set Interface
+         *      LinkedHashSet(CLASS) Implements the Set Interface
+         *
+         */
+
+        /** TODO : LIST INTERFACE - Is an ordered collection of elements that allows duplicate elements
+         *
+         * TODO : AVAILABLE IN THE
+         *
+         *
+         */
+
 
 
     }
