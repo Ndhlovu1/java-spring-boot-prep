@@ -223,6 +223,42 @@ public class Main {
         System.out.println(linkedList1.size());
 
 
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : VECTOR LIST \n\n");
+
+        //TODO : SYNCHRONIZED - ONLY 1 OPERATION AT A TIME
+        // DYNAMIC SIZE, LEGACY SUPPORT, SYNCHRONIZATION
+        // VECTOR METHODS
+
+        /** TODO : VECTOR METHODS
+         *      add() - IT IS USED TO APPEND THE SPECIFIED ELEMENT IN THE GIVEN VECTOR
+         *      addAll() - USED TO APPEND ALL ELEMENTS IN THE SPECIFIED COLLECTION TO THE END OF THIS VECTOR
+         *      addElement() - IT IS USED TO APPEND TO THE END OF THE VECTOR
+         *      capacity() - IT IS USED TO GET THE CURRENT CAPACITY OF THIS VECTOR
+         *      contains() - RETURNS TRUE IF THE VECTOR HAS THE SPECIFIED ELEMENT
+         *      equals() - USED TO COMPARE THE SPECIFIED OBJECT WITH THE VECTOR FOR EQUALITY
+         *      get() - USED TO GET AN ELEMENT AT SPECIFIC POSITION IN VECTOR
+         *      indexOf() - GET THE INDEX OF THE 1ST OCCURENCE
+         *
+         *
+         */
+
+        // VECTOR
+        Vector<String> vector = new Vector<String>();
+        vector.add("LEADERSHIP AND MANAGEMENT");
+        vector.add("WEB APPLICATION PROGRAMMING");
+        vector.add("GAME DEVELOPMENT");
+        vector.add("MOBILE APPLICATION DEVELOPMENT");
+
+        System.out.println("VECTOR SIZE :"+vector.size());
+        for(String item : vector){
+            System.out.println(item);
+        }
+
+        vector.remove(2);
+        System.out.println("VECTOR SIZE :"+vector.size());
+
+        vector.clear();
+        System.out.println("VECTOR SIZE :"+vector.size());
 
 
 
