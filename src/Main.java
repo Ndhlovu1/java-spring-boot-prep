@@ -9,15 +9,16 @@ class StringReverser{
 
         //TODO : DECLARE A STACK
         Stack<Character> stack = new Stack<Character>();
-        for(Character character : stack)
+
+        for(Character character : input.toCharArray())
             //Save the item to the stack with LIFO
             stack.push(character);
 
-            String reversed = "";
+        String reversed = "";
 
-            while (!stack.empty()){
-                reversed += stack.pop();
-            }
+        while (!stack.empty())
+            reversed += stack.pop();
+
 
         return reversed;
 
@@ -311,6 +312,92 @@ public class Main {
 
         System.out.println(stack);
 
+        System.out.println("----------------------------------------------------");
+        System.out.println("\t\tSTACK REVERSE");
+
+        String nam = "Tinomudaishe";
+
+        StringReverser reverser = new StringReverser();
+
+        String revs = reverser.reverseString(nam);
+
+        System.out.println("ORIGINAL STRING : "+nam);
+        System.out.println("REVERSED STRING : "+revs);
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : QUEUE LIST \n\n");
+
+        /** TODO : BASIC QUEUE OPERATIONS
+         *      enqueue()       - Adding an element to the end of the queue
+         *      dequeue()       - Removing or accessing an element from the front of the queue
+         *      peek()          - Used to get the item at the front of the line without removing it
+         *      initialize()    - Creates an empty queue
+         *      isfull()        - Checks if the queue is full
+         *      isempty()       - Checks if the queue is empty
+         *
+         */
+
+        //USING A PRIORITY QUEUE
+        PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
+
+        System.out.println(queue.size());
+
+        queue.add(10);
+        queue.add(50);
+        queue.add(100);
+
+        System.out.println(queue);
+
+        System.out.println("QUEUE : ELEMENT AT FRONT OF THE LIST :"+queue.peek());
+
+        System.out.println("QUEUE : ELEMENT TO BE REMOVED : "+queue.poll());
+
+        System.out.println("QUEUE EMPTY : "+queue.isEmpty());
+
+        //TODO : REVERSE A STRING WITH A QUEUE
+
+        Queue<Integer> queue1 = new ArrayDeque<Integer>();
+        queue1.add(10);
+        queue1.add(20);
+        queue1.add(30);
+        queue1.add(40);
+        System.out.println("STRING REVERSAL\nNORMAL QUEUE : "+queue1);
+        rev(queue1);
+        System.out.println("REVERSED QUEUE : "+queue1);
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : HASHMAP \n\n");
+
+        /** TODO : BASIC MAP METHOD OPERATIONS
+         *      Object put(Object Key, Object value)        - Inserts an entry in the map
+         *      void putAll(Map map)                        - Insets the specified map in the map
+         *      Object remove(Object key)                   - Deletes an entry for the specified key
+         *      boolean containsKey()                       - Returns the value for the specified key
+         *      Set keyset()                                - Returns the Set view containing all the keys
+         *      Set entrySet()                              - Returns the Set view containing all the keys and values
+         *      Object getKey()                             - Used to obtain key
+         *      Object getValue()                           - Used to obtain value
+         *
+         */
+
+
+
+
+
+
+
+
+    }
+
+    public static void rev(Queue<Integer> queue){
+
+        Stack<Integer> stack = new Stack<Integer>();
+
+        while (!queue.isEmpty()){
+            stack.push(queue.remove());
+        }
+
+        while (!stack.isEmpty()){
+            queue.add(stack.pop());
+        }
 
     }
 
