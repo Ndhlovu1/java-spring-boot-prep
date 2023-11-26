@@ -755,6 +755,7 @@ public class Main {
         dog_names.add("Fifa");
         dog_names.add("Keni");
         dog_names.add("Mat");
+        dog_names.add("Mat");
 
         //GET THE REVERSED DESCENDING SET
         NavigableSet<String> reversedSet = dog_names.descendingSet();
@@ -765,11 +766,44 @@ public class Main {
         Iterator<String> dn = dog_names.descendingIterator();
 
         while (dn.hasNext()){
-            System.out.println("FROM ITERATOR :");
+            System.out.println("FROM ITERATOR : "+dn.next());
         }
 
+        NavigableSet<String> navigableSet = dog_names.tailSet("Java", true);
+        System.out.println(navigableSet);
+
+        System.out.println("POLL FIRST : "+dog_names.first());
+        System.out.println("FIRST : "+dog_names.pollFirst());
+        System.out.println("POLL LAST : "+dog_names.pollLast());
+        System.out.println("LAST : "+dog_names.last());
+        System.out.println("HAS A FIRST ITEM : "+dog_names.contains(dog_names.first()));
 
 
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : TREESET INTERFACE \n\n");
+
+        /** TODO : TREESEARCH - USED FOR SELF BALANCING BINARY TREE
+         *      1. USEFUL FOR LARGE DATASETS
+         *
+         *
+         */
+
+        NavigableSet<String> set3 = new TreeSet<String>();
+
+        set3.add("Hello");
+        set3.add("Maswera Sei");
+        set3.add("Huzit");
+        set3.add("Mosh Mosh");
+
+        System.out.println("VERIFICATION : "+set3.contains("Huzit"));
+        System.out.println("FIRST : "+set3.first());
+        System.out.println("LAST : "+set3.last());
+        System.out.println("POLL FIRST : "+set3.pollFirst());
+        System.out.println("POLL LAST : "+set3.pollLast());
+
+
+        EnumSet<Size> sizes4 = EnumSet.allOf(Size.class);
+        System.out.println(sizes4);
 
 
 
@@ -777,7 +811,7 @@ public class Main {
     }
 
     enum Size{
-        EXTRASMALL,SMALL, MEDIUM, LARGE, EXTRALARGE
+        EXTRASMALL,SMALL, MEDIUM, LARGE, EXTRALARGE, APPLES
     }
 
 
