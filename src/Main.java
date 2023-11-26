@@ -658,6 +658,23 @@ public class Main {
         EnumSet<Size> sizes2 = EnumSet.range(Size.MEDIUM, Size.EXTRALARGE);
         System.out.println("SIZES 2 : "+sizes2);
 
+        //CREATE A SPECIFIC SET AND ADD ELEMENTS
+        EnumSet<Size> sizes3 = EnumSet.of(Size.SMALL, Size.LARGE);
+        System.out.println("SIZES 3 : "+sizes3);
+
+        Iterator<Size> iterator2 = sizes3.iterator();
+
+        while (iterator2.hasNext()){
+            System.out.println("VALUE: "+ iterator2.next());
+        }
+
+        sizes2.add(Size.EXTRASMALL);
+        Iterator<Size> sizeIterator =sizes2.iterator();
+
+        while (sizeIterator.hasNext()){
+            System.out.println("ITEM : "+sizeIterator.next());
+        }
+
 
 
 
@@ -665,7 +682,7 @@ public class Main {
     }
 
     enum Size{
-        SMALL, MEDIUM, LARGE, EXTRALARGE
+        EXTRASMALL,SMALL, MEDIUM, LARGE, EXTRALARGE
     }
 
 
