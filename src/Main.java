@@ -603,20 +603,61 @@ public class Main {
 
         System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : HASHSET INTERFACE \n\n");
 
-        HashSet<Integer> numb = new HashSet<Integer>();
+        HashSet<String> numb = new HashSet<String >();
 
-        numb.add(100);
-        numb.add(200);
-        numb.add(300);
-        numb.add(400);
+        numb.add("100");
+        numb.add("200");
+        numb.add("300");
+        numb.add("400");
 
         System.out.println(numb);
 
-        Iterator<Integer> iterator1 = numb.iterator();
+        Iterator<String> iterator1 = numb.iterator();
 
         while (iterator1.hasNext()){
             System.out.println("Item : "+iterator1.next());
         }
+
+        HashSet<String> set2 = new HashSet<String>();
+
+        set2.add("Zambia");
+        set2.add("Zimbabwe");
+        set2.add("Angola");
+        set2.add("Malawi");
+        set2.add("Namibia");
+
+        System.out.println("SET 2 : "+set2);
+
+        System.out.println("SET 2 SIZE : "+set2.size());
+
+        set2.addAll(numb);
+
+        System.out.println("Removed All In Numb : "+numb.removeAll(numb));
+
+        System.out.println("UNION OF SET 2 AND NUMB : "+set2);
+
+        //set2.removeAll(numb);
+
+        System.out.println("REMOVED ALL NUMBERS : "+set2);
+
+        //System.out.println("NUMB VALUES : "+numb);
+
+        set2.removeAll(numb);
+
+        System.out.println("SET 2 : "+set2);
+
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : ENUMSET INTERFACE \n\n");
+
+        EnumSet<Size> sizes = EnumSet.allOf(Size.class);
+        System.out.println("SIZES : "+sizes);
+
+        EnumSet<Size> sizes1 = EnumSet.noneOf(Size.class);
+        System.out.println("SIZES 1 :"+sizes1);
+
+        EnumSet<Size> sizes2 = EnumSet.range(Size.MEDIUM, Size.EXTRALARGE);
+        System.out.println("SIZES 2 : "+sizes2);
+
 
 
 
