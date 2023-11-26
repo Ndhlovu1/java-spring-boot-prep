@@ -391,7 +391,7 @@ public class Main {
         }
 
         String value = map.get(24);
-        System.out.println(value);
+        System.out.println("HASHMAP"+value);
         System.out.println("ALL KEYS IN OUR MAP : "+map.keySet());
         System.out.println("ALL VALUES IN OUR MAP : "+map.values());
         System.out.println("REMOVING : "+map.remove(24));
@@ -557,6 +557,17 @@ public class Main {
         System.out.println("TREEMAP VALUES : "+ treeMap.values());
         System.out.println("TREEMAP KEYS : "+ treeMap.keySet());
         System.out.println("TREEMAP ENTRY SET : "+ treeMap.entrySet());
+
+
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : SET INTERFACE \n\n");
+
+        /**TODO - SET INTERFACE
+         *  We cant create direct
+         *
+         *
+         */
+
 
 
 
