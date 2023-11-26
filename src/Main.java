@@ -401,15 +401,172 @@ public class Main {
 
 
 
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : LINKED HASHMAP \n\n");
+
+        LinkedHashMap<String,Integer> even_numbers = new LinkedHashMap<String, Integer>();
+
+        even_numbers.put("Two",2);
+        even_numbers.put("Four",4);
+        even_numbers.put("Six",6);
+        even_numbers.put("Eight",8);
+
+        System.out.println(even_numbers);
+
+        LinkedHashMap<String, Integer> numbers = new LinkedHashMap<String,Integer>(even_numbers);
+
+        numbers.put("Ten",10);
+
+        System.out.println("NUMBERS : "+numbers);
+
+        numbers.putIfAbsent("Six",6);
+        numbers.putIfAbsent("Twelve",12);
+
+        System.out.println("NUMBERS AFTER ADDING "+numbers);
+
+
+        /** TODO : WEAK HASMAP METHODS
+         *      clear()
+         *      containsKey()
+         *      size()
+         *      isEmpty()
+         *
+         */
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : WEAK HASHMAP \n\n");
+
+        WeakHashMap<String, Integer> weakHashMap = new WeakHashMap<String , Integer>();
+
+        weakHashMap.put("ONE", 1);
+        weakHashMap.put("TWO", 2);
+        weakHashMap.put("THREE", 3);
+        weakHashMap.put("FOUR", 4);
+        weakHashMap.put("FIVE", 5);
+
+        String six = new String("SIX");
+
+        Integer six_Value = 6;
+
+        weakHashMap.put(six,six_Value);
+        System.out.println(weakHashMap);
+
+        //ADD NULL VALUE
+        six = null;
+
+        System.gc();
+        System.out.println("WEAK HASHMAP : "+weakHashMap);
+
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : ENUMMAP \n\n");
+
+        EnumMap<Size, Integer> enum_size = new EnumMap<>(Size.class);
+
+        enum_size.put(Size.SMALL, 20);
+        enum_size.put(Size.MEDIUM, 40);
+        enum_size.put(Size.LARGE, 80);
+        enum_size.put(Size.EXTRALARGE, 160);
+
+        System.out.println("ENUM PIZZA SIZES : "+enum_size);
+        System.out.println("MEDIUM VALUES : "+Size.MEDIUM);
+        System.out.println("ENTRY SET : "+enum_size.entrySet());
+        System.out.println("KEY SET : "+enum_size.keySet());
+        System.out.println("VALUE SET : "+enum_size.values());
+
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : SORTEDMAP INTERFACE \n\n");
+
+        /**TODO : SORTED MA
+         *  comparator()        -   Returns a comparator that can be used to order keys in a map
+         *  firstKey()          -   Returns the first key of the sorted map
+         *  lastKey()           -   Returns the last key of the sorted map
+         *  headMap(key)        -   returns all the entries of a map whose keys are less than the specified
+         *  tailMap(key)        -   returns all entries of a map whose keys are greater than or equal to specified key
+         *  subMap(key1, key2)  -   Returns all entries of a map whose keys lie in between key1 and key2 including key1
+         */
+
+        SortedMap<String, Integer> num = new TreeMap<String, Integer>();
+
+        num.put("Zimbabwe", 1);
+        num.put("Angola", 2);
+        num.put("Namibia", 3);
+        num.put("Uganda", 4);
+        num.put("Zambia", 5);
+        num.put("Sychelles", 6);
+
+        System.out.println("Sorted Map : "+num);
+        System.out.println("First Key : "+num.firstKey());
+        System.out.println("Last Key : "+num.lastKey());
+        System.out.println("Tail Map : "+num.tailMap("Uganda"));
+        System.out.println("Sub Map : "+num.subMap("Namibia", "Sychelles"));
+
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : NAVIGABLEMAP \n\n");
+
+        /** TODO : NAVIGABLE MAP - ASCENDING ORDER IS THE DEFAULT
+         *      ceilingEntry(K, key)    - RETURNS A KEY-VALUE MAPPING WHICH IS ASSOCIATED WITH THE LEAST KEY WHICH IS GREATER THAN OR EQUAL TO THE SPECIFIED KEY
+         *      ceilingKey(K key)       - Returns the least key that is greater than or equal to the specified key
+         *      descendingKeySet()      - Returns the reverse order NavigableSet view for the given keys
+         *      descendingMap()         - Returns the reverse order view of the mapping present in the map
+         *      firstEntry()            - Returns a key-value mapping which is associated with the least key in the given map
+         *      floorEntry(K key)            - Returns a key-value mapping which is associated with the greatest key which is less than or equal to the given key
+         *
+         */
+
+        NavigableMap<String, Integer> nav_map = new TreeMap<String, Integer>();
+        nav_map.put("Russia",1);
+        nav_map.put("Turkey",2);
+        nav_map.put("China",3);
+        nav_map.put("Indonesia",4);
+        nav_map.put("Thailand",5);
+
+        System.out.println("NAVIGABLE MAP : "+nav_map);
+        System.out.println("FIRST ENTRY : "+nav_map.firstEntry());
+        System.out.println("LAST ENTRY : "+nav_map.lastEntry());
+        System.out.println("POLL FIRST ENTRY : "+nav_map.pollFirstEntry());
+        System.out.println("POLL LAST ENTRY : "+nav_map.pollLastEntry());
 
 
 
 
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : TREEMAP \n\n");
 
+        /** TODO - TREE MAP EXTENDS THE NAVIGABLE MAP INTERFACE
+         *      1. NO NULL KEYS, BUT NULL VALUES
+         *      2. DO NOT SUPPORT ENTRY.SET.VALUE ORDER
+         *      METHODS
+         *      Map.Entry<K, V> ceilingEntry(K key)     -   RETURNS THE KEY VALUE PAIR HAVING THE LEAST KEY, GREATER THAN OR EQUAL TO THE SPECIFIED KEY, OR NULL IF THERE'S NO SUCH KEY
+         *      K ceilingKey(K key)                     -   Returns the least key, greater than or null if there is no such key
+         *      void clear()                            -   Removes all k-v pairs from the map
+         *      Object clone()                          -   Returns a shallow copy of TreeMap instance
+         *      Comparator<?super K> , comparator       -   Returns the comparator that arranges the key in order
+         *      NavigableSet<K>descendingKeySet()       -   It returns order NavigableSet view of the keys contained in map
+         *
+         *
+         */
+
+        TreeMap<String , Integer> treeMap = new TreeMap<String,Integer>();
+        treeMap.put("Brazil",1);
+        treeMap.put("Argentina",2);
+        treeMap.put("Columbia",3);
+        treeMap.put("Venezuala",4);
+        treeMap.put("Nicaragua",5);
+
+        treeMap.putIfAbsent("Brazil",1);
+        treeMap.putIfAbsent("Uruguay",6);
+
+        System.out.println("TREEMAP : "+ treeMap);
+        System.out.println("TREEMAP VALUES : "+ treeMap.values());
+        System.out.println("TREEMAP KEYS : "+ treeMap.keySet());
+        System.out.println("TREEMAP ENTRY SET : "+ treeMap.entrySet());
 
 
 
     }
+
+    enum Size{
+        SMALL, MEDIUM, LARGE, EXTRALARGE
+    }
+
+
 
     public static void rev(Queue<Integer> queue){
 
