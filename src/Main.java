@@ -677,6 +677,101 @@ public class Main {
 
 
 
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : ENUMSET INTERFACE \n\n");
+
+        /** TODO : LINKEDHASHSET - ORDERED VERSION OF HASHSET THAT MAINTAINS A DOUBLY LINKED LIST ACROSS ALL ELEMENTS
+         *
+         */
+
+        ArrayList<String> continents = new ArrayList<>();
+
+        continents.add("AFRICAN");
+        continents.add("EUROPEAN");
+        continents.add("AMERICAN");
+        continents.add("ASIA");
+
+        LinkedHashSet<String> nations = new LinkedHashSet<String>();
+        nations.addAll(continents);
+        nations.add("Zimbabwe");
+        nations.add("Namibia");
+        nations.add("South Africa");
+
+        Iterator<String> stringIterator = nations.iterator();
+
+        while (stringIterator.hasNext()){
+            System.out.println("NATION/CONTINENT : "+stringIterator.next());
+        }
+
+        continents.forEach(nations::remove);
+        System.out.println("FOUND IN NATIONS LINKEDHASHSET : "+nations);
+        System.out.println("FOUND IN CONTINENTS ARRAYLIST : "+continents);
+
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : SORTEDSET INTERFACE \n\n");
+
+        /** TODO : LINKEDHASHSET - ORDERED VERSION OF HASHSET THAT MAINTAINS A DOUBLY LINKED LIST ACROSS ALL ELEMENTS
+         *
+         */
+
+        SortedSet<String> set = new TreeSet<String>();
+
+        set.add("Zimbabwe");
+        set.add("Luthiania");
+        set.add("Albenia");
+        set.add("Morroco");
+        set.add("Morroco");
+
+        Iterator<String> stringIterator1 = set.iterator();
+
+        while (stringIterator1.hasNext()){
+            System.out.println("SORTED SET DATA : "+stringIterator1.next());
+        }
+
+        System.out.println("SORTED SET INHERITING AUTO BALANCING TREE SET : \n"+set);
+
+        System.out.println("Contains India : "+set.contains("India"));
+        System.out.println("Contains Zimbabwe : "+set.contains("Zimbabwe"));
+        System.out.println("First Value : "+set.first());
+        System.out.println("Last Value : "+set.last());
+
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : NAVIGABLE HASHSET INTERFACE \n\n");
+
+        /** TODO : LINKEDHASHSET - ORDERED VERSION OF HASHSET THAT MAINTAINS A DOUBLY LINKED LIST ACROSS ALL ELEMENTS
+         *      1. Capable of Sort Search, Ascending or Descending Order
+         *      COMMON METHODS
+         *      1. ceiling - Returns least element in this set greater than or equal to the given element or null if none
+         *      2. descendingIterator() - Returns an iterator in this set in descending order
+         *      3. descendingSet() - Returns a reverse order view of the elements contained in this set
+         *      4. floor(E e) - Returns the greatest element in this set less than or equal to the given element or null if there is no such element
+         *      5. headSet(E toElement) - Returns a view or the portion of this set whose elements are strictly less than toElement
+         *      6. iterator() - Returns an iterator over the elements in this set, in ascending order
+         */
+
+        NavigableSet<String> dog_names = new TreeSet<String>();
+
+        dog_names.add("Django");
+        dog_names.add("Java");
+        dog_names.add("Fifa");
+        dog_names.add("Keni");
+        dog_names.add("Mat");
+
+        //GET THE REVERSED DESCENDING SET
+        NavigableSet<String> reversedSet = dog_names.descendingSet();
+        System.out.println("REVERSED SET : "+reversedSet);
+
+        //dog_names.descendingIterator();
+
+        Iterator<String> dn = dog_names.descendingIterator();
+
+        while (dn.hasNext()){
+            System.out.println("FROM ITERATOR :");
+        }
+
+
+
+
+
 
 
     }
