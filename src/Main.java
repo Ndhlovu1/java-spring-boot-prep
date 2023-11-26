@@ -563,10 +563,60 @@ public class Main {
         System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : SET INTERFACE \n\n");
 
         /**TODO - SET INTERFACE
-         *  We cant create direct
+         *  We cant create direct implementations of a set
+         *  We can use : EnumSet, HashSet, LinkedHashSet, TreeSet
+         *  It is also extended by the SortedSet and the NavigableSet
          *
+         *  METHODS TO BE USED WITH THE SET INTERFACE
+         *
+         *  add()           -   Adds an element to the set
+         *  addAll()        -   Adds all elements of the specified collection to the set
+         *  iterator()      -   Returns an iterator that can be used to access elements of the set sequentially
+         *  remove()        -   Removes a specified element
+         *  removeAll()     -   Removes a all elements from the set that are present in another specified set
+         *  retainAll()     -   Retains all elements in the set that are also present in another specified set
+         *  contains()      -   Returns true if the set contains specified element
+         *  containsAll()   -   Returns true if the set contains all the elements of the specified collection
+         *  toArray()       -   Returns an array containing all the elements of the set
          *
          */
+
+        // Union, Intersection and Subset
+        //Verify util package
+        Set<Integer> set1 = new HashSet<Integer>();
+        set1.add(100);
+        set1.add(200);
+        set1.add(300);
+        set1.add(400);
+        set1.add(400);
+        set1.add(500);
+
+        System.out.println("HASHSET : "+set1);
+
+        //Use Iterator
+        Iterator<Integer> iterator = set1.iterator();
+
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+
+
+        System.out.println("\n\n\n\n\nCOLLECTIONS FRAMEWORK : HASHSET INTERFACE \n\n");
+
+        HashSet<Integer> numb = new HashSet<Integer>();
+
+        numb.add(100);
+        numb.add(200);
+        numb.add(300);
+        numb.add(400);
+
+        System.out.println(numb);
+
+        Iterator<Integer> iterator1 = numb.iterator();
+
+        while (iterator1.hasNext()){
+            System.out.println("Item : "+iterator1.next());
+        }
 
 
 
